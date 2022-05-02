@@ -54,6 +54,7 @@ add_message_files(
   PositionTarget.msg
   RCIn.msg
   RCOut.msg
+  RPM.msg
   RTCM.msg
   RadioStatus.msg
   RTKBaseline.msg
