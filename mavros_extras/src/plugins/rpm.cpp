@@ -38,7 +38,7 @@ public:
 
 		rpm_nh.param<std::string>("frame_id", frame_id, "base_link");
 
-		rpm_pub = rpm_nh.advertise<mavros_msgs::RPM>("rpm", 10);
+		rpm_pub = rpm_nh.advertise<mavros_msgs::RPM>("frequency", 10);
 	}
 
 	Subscriptions get_subscriptions() override
