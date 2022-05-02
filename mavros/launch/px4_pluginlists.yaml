@@ -6,7 +6,6 @@ plugin_blacklist:
 - vibration
 - distance_sensor
 - rangefinder
-- rpm
 - wheel_odometry
 
 
