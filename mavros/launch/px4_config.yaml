@@ -232,6 +232,10 @@ px4flow:
   ranger_min_range: 0.3     # meters
   ranger_max_range: 5.0     # meters
 
+# rpm
+rpm:
+  test_value: "test"
+
 # vision_pose_estimate
 vision_pose:
   tf:
