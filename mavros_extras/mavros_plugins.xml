@@ -90,4 +90,7 @@
   <class name="mag_calibration_status" type="mavros::std_plugins::MagCalStatusPlugin" base_class_type="mavros::plugin::PluginBase">
     <description>Send calibration status to ROS.</description>
   </class>
+  <class name="hover_thrust_estimate" type="mavros::std_plugins::HoverThrustEstimatePlugin" base_class_type="mavros::plugin::PluginBase">
+    <description>Publish HOVER_THRUST_ESTIMATE message data from FCU to companion computer.</description>
+  </class>
 </library>
