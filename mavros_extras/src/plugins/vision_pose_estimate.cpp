@@ -15,6 +15,7 @@
  * https://github.com/mavlink/mavros/tree/master/LICENSE.md
  */
 
+#include <ros/transport_hints.h>
 #include <mavros/mavros_plugin.h>
 #include <mavros/setpoint_mixin.h>
 #include <eigen_conversions/eigen_msg.h>
@@ -57,8 +58,8 @@ public:
 			tf2_start("VisionPoseTF", &VisionPoseEstimatePlugin::transform_cb);
 		}
 		else {
-			vision_sub = sp_nh.subscribe("pose", 10, &VisionPoseEstimatePlugin::vision_cb, this);
-			vision_cov_sub = sp_nh.subscribe("pose_cov", 10, &VisionPoseEstimatePlugin::vision_cov_cb, this);
+			vision_sub = sp_nh.subscribe("pose", 10, &VisionPoseEstimatePlugin::vision_cb, this, ros::TransportHints().tcpNoDelay());
+			vision_cov_sub = sp_nh.subscribe("pose_cov", 10, &VisionPoseEstimatePlugin::vision_cov_cb, this, ros::TransportHints().tcpNoDelay());
 		}
 	}
 
